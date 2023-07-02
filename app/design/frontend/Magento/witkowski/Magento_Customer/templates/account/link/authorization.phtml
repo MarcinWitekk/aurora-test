@@ -12,7 +12,7 @@ if ($block->isLoggedIn()) {
     <a <?= /* @noEscape */ $block->getLinkAttributes() ?>
         class="action login"
         <?= /* @noEscape */ $dataPostParam ?>>
-        <img loading="lazy" src="<?php echo $this->getViewFileUrl('images/icons/login.svg'); ?>" alt="Login icon" width="9" height="12">
+        <img loading="lazy" src="<?= $escaper->escapeHtmlAttr($this->getViewFileUrl('images/icons/login.svg')); ?>" alt="Login icon" width="9" height="12">
         <span><?= $escaper->escapeHtml($block->getLabel()) ?></span>
     </a>
 </li>

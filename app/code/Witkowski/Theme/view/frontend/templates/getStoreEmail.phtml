@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var $block \Witkowski\Theme\Block\GetStoreContactInfo
+ * @var $escaper \Magento\Framework\Escaper
+ */
+?>
+
+<?php
+    $_storeEmail = $block->getStoreEmail();
+?>
+
+<li class="link store-email">
+    <a class="action create" href="mailto:<?= $escaper->escapeHtmlAttr($_storeEmail) ?>">
+        <img loading="lazy" src="<?= $escaper->escapeHtmlAttr($this->getViewFileUrl('images/icons/icon__mail.svg')); ?>" alt="Mail icon" width="12" height="13">
+        <span><?= $escaper->escapeHtml($_storeEmail) ?></span>
+    </a>
+</li>

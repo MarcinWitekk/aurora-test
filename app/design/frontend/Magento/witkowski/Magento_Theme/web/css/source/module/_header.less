@@ -13,7 +13,7 @@
                 }
 
                 &.content {
-                    padding: 35px @layout-indent__width 47px;
+                    .lib-css(padding, 35px @layout-indent__width 47px);
                 }
 
                 &.panel {
@@ -21,6 +21,10 @@
                     padding-bottom: 0;
 
                     .header.links {
+                        .lib-vendor-prefix-display(flex);
+                        justify-content: space-between;
+                        float: none;
+
                         .link {
                             .lib-css(border-right, 1px solid @color-gray103);
                             margin: 0;
@@ -41,6 +45,26 @@
                                 span {
                                     .lib-font-size(13);
                                     .lib-line-height(13);
+                                }
+                            }
+
+                            &.store-phone {
+                                .lib-vendor-prefix-order(-2);
+                                border: none;
+
+                                a {
+                                    .lib-css(padding-right, @indent__s);
+                                    padding-left: 0;
+                                }
+                            }
+
+                            &.store-email {
+                                .lib-vendor-prefix-order(-1);
+                                .lib-vendor-prefix-flex-grow(1);
+
+                                a {
+                                    .lib-css(padding-left, @indent__s);
+                                    width: max-content;
                                 }
                             }
                         }

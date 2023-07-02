@@ -7,7 +7,7 @@
 <li class="link registration-link">
     <a <?= /* @noEscape */ $block->getLinkAttributes() ?>
         class="action create">
-        <img loading="lazy" src="<?php echo $this->getViewFileUrl('images/icons/register.svg'); ?>" alt="Login icon" width="12" height="13">
+        <img loading="lazy" src="<?= $escaper->escapeHtmlAttr($this->getViewFileUrl('images/icons/register.svg')); ?>" alt="Register icon" width="12" height="13">
         <span><?= $escaper->escapeHtml(__('Create an Account')); ?></span>
     </a>
 </li>

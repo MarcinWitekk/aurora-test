@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var $block \Witkowski\Theme\Block\GetStoreContactInfo
+ * @var $escaper \Magento\Framework\Escaper
+ */
+?>
+
+<?php
+    $_storePhone = $block->getStorePhone();
+?>
+
+<li class="link store-phone">
+    <a class="action create" href="tel:<?= $escaper->escapeHtmlAttr($_storePhone) ?>">
+        <img loading="lazy" src="<?= $escaper->escapeHtmlAttr($this->getViewFileUrl('images/icons/icon__phone.svg')); ?>" alt="Phoone icon" width="12" height="13">
+        <span><?= $escaper->escapeHtml($_storePhone) ?></span>
+    </a>
+</li>
