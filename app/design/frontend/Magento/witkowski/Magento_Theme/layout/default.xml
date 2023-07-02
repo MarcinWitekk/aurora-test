@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="template" xsi:type="string">Magento_Customer::account/link/register.phtml</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="wish-list-link" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+    </body>
+</page>

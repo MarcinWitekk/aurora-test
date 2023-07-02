@@ -1,0 +1,44 @@
+//
+//  Variables
+//  _____________________________________________
+
+@autocomplete__background-color: @color-white;
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .block-search {
+        input {
+            .lib-font-size(14);
+        }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .header.content {
+        display: flex;
+    }
+    .block-search {
+        .lib-css(margin, @indent__m auto 0 auto);
+        max-width: 479px;
+        width: 100%;
+        padding: 0;
+
+        .actions {
+            .action.search {
+                right: 0;
+                top: 1px;
+                padding: 0;
+                opacity: 1;
+            }
+        }
+
+        .control {
+            padding: 0;
+        }
+    }
+}

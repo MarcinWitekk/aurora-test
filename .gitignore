@@ -50,7 +50,7 @@ composer.lock
 dev/
 generated/
 grunt-config.json.sample
-lib/
+#lib/
 nginx.conf.sample
 package.json.sample
 phpserver/
@@ -69,4 +69,7 @@ Gruntfile.js.sample
 LICENSE.txt
 LICENSE_AFL.txt
 SECURITY.md
-
+Gruntfile.js
+grunt-config.json
+package.json
+lib/

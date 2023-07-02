@@ -1,0 +1,99 @@
+//
+//  Navigation variables
+//  _____________________________________________
+
+@navigation__background: @color-white;
+@navigation-desktop-level0-item__line-height: 42px;
+@navigation-desktop-level0-item__active__border-width: 0;
+@navigation-desktop-level0-item__color: @primary__color;
+@navigation-desktop-level0-item__hover__color: @navigation-desktop-level0-item__color;
+@submenu-desktop__min-width: 180px;
+@navigation-desktop-level0-item__padding: 0;
+@navigation-desktop-level0-item__margin: 0;
+@submenu-desktop__font-weight: @font-weight__light;
+@navigation-desktop-level0-item__active__color: @active__color;
+@submenu-desktop-item__active__color: @active__color;
+@submenu-desktop-item__active__border-width: 0;
+@submenu-desktop__padding: 12px 0;
+@submenu-desktop-item__padding: 10px 0px 10px 29px;
+@navigation__border: 1px solid @color-gray105;
+
+.lib-main-navigation-desktop(
+    @item_1_text_transform: @navigation-level0-item__text-transform
+) {
+    .nav-sections {
+        .navigation {
+            .lib-css(padding, 0 @layout-indent__width);
+
+            ul {
+                padding: 0 0 0 5px;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-flex-wrap(wrap);
+                justify-content: space-between;
+                .lib-css(border-bottom, @navigation__border);
+            }
+
+            .level0 {
+                > .level-top {
+                    .lib-font-size(11);
+                    .lib-css(text-transform, @item_1_text_transform);
+                }
+
+                &.parent {
+                    .level-top {
+                        .ui-menu-icon {
+                            display: none; // because options.icon.submenu in widget extend dont work
+                        }
+                    }
+                }
+
+                .submenu {
+                    box-sizing: border-box;
+
+                    li.parent {
+                        a {
+                            .ui-menu-icon {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &.parent {
+                    > .level-top {
+                        padding-right: 0;
+                    }
+                }
+                &.first {
+                    > .level-top {
+                        padding-left: 0;
+                    }
+                }
+
+                &.last {
+                    > .level-top {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+};
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .nav-sections {
+        .navigation {
+            ul {
+                .level0 {
+                    > .level-top {
+                        .lib-font-size(14)
+                    }
+                }
+            }
+        }
+    }
+}
