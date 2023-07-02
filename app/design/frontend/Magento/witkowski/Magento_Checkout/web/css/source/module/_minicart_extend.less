@@ -15,6 +15,7 @@
         box-sizing: border-box;
         padding: 7px 0 4px;
         margin-bottom: 22px;
+        min-height: 238px;
 
         .minicart-items {
             .product-item {
@@ -25,6 +26,8 @@
                 }
 
                 .product-item-details {
+                    padding-left: 90px;
+
                     .product-item-name {
                         .lib-font-size(11);
                         .lib-line-height(21);
@@ -54,6 +57,11 @@
                                 margin-left: 6px;
                                 padding: 0;
                             }
+                        }
+
+                        .details-and-actions-wrapper {
+                            .lib-vendor-prefix-display(flex);
+                            justify-content: space-between;
                         }
                     }
 
@@ -191,6 +199,8 @@
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .minicart-wrapper {
+        min-height: 257px;
+
         .action {
             &.showcart.active,
             &.showcart {
@@ -199,6 +209,10 @@
                 }
             }
         }
+    }
+
+    .minicart-items-wrapper {
+        min-height: 257px;
     }
 }
 
@@ -227,5 +241,9 @@
                 }
             }
         }
+    }
+
+    .minicart-items-wrapper {
+        min-height: 238px;
     }
 }
