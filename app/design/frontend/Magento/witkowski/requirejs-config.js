@@ -1,7 +1,7 @@
 var config = {
     map: {
         '*': {
-            // 'menu': 'js/my.menu'
+            'menu': 'js/my.menu'
         }
     },
 }
